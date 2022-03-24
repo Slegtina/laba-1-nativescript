@@ -9,7 +9,7 @@ https://docs.nativescript.org/ui/components.
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
     -->
-    <ActionBar title="My App" icon="" />
+    <ActionBar title="Калькулятор" icon="" />
 
     <!--
     The StackLayout stacks UI components on the screen—either vertically or horizontally.
@@ -22,9 +22,27 @@ https://docs.nativescript.org/ui/components.
     The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
     You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
     -->
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
+    <StackLayout backgroundColor="#000000"  >
+        <Label text="{{ message }}" class="calc-screen" height="180" backgroundColor="#000000"/>
+        <GridLayout columns="*,*,*,*" rows="*,*,*,*,*" backgroundColor="#000000">
+            <Button  text="C" tap="{{onTap}}" row="0" col="0"  colSpan="3" class="btn ac bg-grey"/>
+            <Button  text="÷" tap="{{onTap}}" row="0" col="3" class="btn division bg-orange" />
+            <Button  text="7" tap="{{onTap}}" row="1" col="0" class="btn" />
+            <Button  text="8" tap="{{onTap}}" row="1" col="1" class="btn" />
+            <Button  text="9" tap="{{onTap}}" row="1" col="2" class="btn" />
+            <Button  text="×" tap="{{onTap}}" row="1" col="3" class="btn myltiply bg-orange"/>
+            <Button  text="4" tap="{{onTap}}" row="2" col="0" class="btn" />
+            <Button  text="5" tap="{{onTap}}" row="2" col="1" class="btn" />
+            <Button  text="6" tap="{{onTap}}" row="2" col="2" class="btn" />
+            <Button  text="-" tap="{{onTap}}" row="2" col="4" class="btn myltiply bg-orange" />
+            <Button  text="1" tap="{{onTap}}" row="3" col="0" class="btn" />
+            <Button  text="2" tap="{{onTap}}" row="3" col="1" class="btn" />
+            <Button  text="3" tap="{{onTap}}" row="3" col="2" class="btn" />
+            <Button  text="+" tap="{{onTap}}" row="3" col="3" class="btn myltiply bg-orange" />
+            <Button  text="0" tap="{{onTap}}" row="4" col="0" colSpan="2" class="btn zero"   />
+            <Button  text="." tap="{{onTap}}" row="4" col="2" class="btn" />
+            <Button  text="=" tap="{{onTap}}" row="4" col="3" class="btn myltiply bg-orange" />
+        </GridLayout>
     </StackLayout>
 </Page>
+
